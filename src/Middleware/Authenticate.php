@@ -75,6 +75,10 @@ class Authenticate
         if ($key && $token = request()->query($key)) {
             return $token;
         }
+        $key = config('mix-auth.keys.cookie');
+        if ($key && $token = request()->cookie($key)) {
+            return $token;
+        }
 
         return null;
     }

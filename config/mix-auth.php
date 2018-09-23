@@ -89,6 +89,7 @@ return [
         'header' => 'Authorization',
         'query'  => 'api_token',
         'body'   => 'api_token',
+        'cookie'   => 'api_token',
     ],
 
 ];
